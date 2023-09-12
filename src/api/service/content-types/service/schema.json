@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "services",
+  "info": {
+    "singularName": "service",
+    "pluralName": "services",
+    "displayName": "기내 서비스",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext",
+      "default": "환경을 위해 제작한 새로운 프로토타입의 그릇에 엄선된 식재료를 이용한 에어프레미아의 프리미엄 기내식 을 정성스레 담아냈습니다.",
+      "required": true
+    },
+    "desc_back_image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "foods": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::inflight-service.inflight-service",
+      "mappedBy": "parents"
+    },
+    "drinks": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::inflight-service-drink.inflight-service-drink",
+      "mappedBy": "parents"
+    },
+    "table": {
+      "type": "json"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_component1_component1s",
+  "info": {
+    "displayName": "component1",
+    "icon": "bell"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "date": {
+      "type": "date"
+    }
+  }
+}

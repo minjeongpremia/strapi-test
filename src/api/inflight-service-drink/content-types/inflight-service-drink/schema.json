@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "inflight_service_drinks",
+  "info": {
+    "singularName": "inflight-service-drink",
+    "pluralName": "inflight-service-drinks",
+    "displayName": "기내식_음료"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "parents": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::service.service",
+      "inversedBy": "drinks"
+    }
+  }
+}

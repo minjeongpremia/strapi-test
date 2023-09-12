@@ -1,0 +1,29 @@
+{
+  "kind": "singleType",
+  "collectionName": "signle_types",
+  "info": {
+    "singularName": "signle-type",
+    "pluralName": "signle-types",
+    "displayName": "signleType"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "richtext": {
+      "type": "string"
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "baby": {
+      "type": "json"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "admin::user"
+    }
+  }
+}
